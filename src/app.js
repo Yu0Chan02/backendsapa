@@ -13,6 +13,7 @@ app.use('/api/pengaduan', pengaduanRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server SAPA berjalan di http://localhost:${PORT}`);
+  console.log(`Server berjalan di http://0.0.0.0:${PORT}`);
 });
+
  
