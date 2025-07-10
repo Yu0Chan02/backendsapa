@@ -13,10 +13,13 @@ exports.buatPengaduan = async (req, res) => {
     });
 
     res.status(201).json({ message: "Pengaduan berhasil dikirim", data: pengaduan });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Terjadi kesalahan saat mengirim pengaduan." });
-  }
+} catch (error) {
+  console.error("❌ ERROR PENGADUAN:", error);
+  res.status(500).json({ 
+    message: "Terjadi kesalahan saat mengirim pengaduan.",
+    error: error.message,
+  });
+}
 };
 
 exports.getSemuaPengaduan = async (req, res) => {
